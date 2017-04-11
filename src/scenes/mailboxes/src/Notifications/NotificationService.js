@@ -161,7 +161,8 @@ class NotificationService extends EventEmitter {
       const windowNotification = new window.Notification(title, {
         body: body,
         silent: silent,
-        data: notification.data
+        data: notification.data,
+        application: "Wavebox"
       })
       windowNotification.onclick = this.handleNotificationClicked
       return windowNotification
